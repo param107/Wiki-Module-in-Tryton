@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="wiki_view_form">
+            <field name="model">wiki.wiki</field>
+            <field name="type">form</field>
+            <field name="name">wiki_form</field>
+        </record>
+        <record model="ir.ui.view" id="wiki_view_tree">
+            <field name="model">wiki.wiki</field>
+            <field name="type">tree</field>
+            <field name="name">wiki_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_wiki_form">
+            <field name="name">Wiki</field>
+            <field name="res_model">wiki.wiki</field>
+        </record>
+           <record model="ir.action.act_window.view" id="act_wiki_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="wiki_view_tree"/>
+            <field name="act_window" ref="act_wiki_form"/>
+        </record>
+          <record model="ir.action.act_window.view" id="act_wiki_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="wiki_view_form"/>
+            <field name="act_window" ref="act_wiki_form"/>
+        </record>
+         <menuitem parent="ir.menu_administration" action="act_wiki_form"
+            id="menu_wiki_form"/>    
+    </data>
+</tryton>

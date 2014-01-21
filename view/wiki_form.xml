@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="wiki">
+    <label name="article_name"/>
+    <field name="article_name"/>
+    <label name="content"/>
+    <field name="content"/>
+</form>
